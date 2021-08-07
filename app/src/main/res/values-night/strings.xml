@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="log_in">Log In</string>
+    <string name="don_t_have_an_account_sign_up">Don\'t have an account? Sign up</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="write_your_message">write your message</string>
+    <string name="send">Send</string>
+</resources>
