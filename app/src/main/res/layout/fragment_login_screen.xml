@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-
     tools:context=".LoginScreenFragment">
 
 
@@ -14,6 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/email"
         android:inputType="textEmailAddress" />
@@ -23,6 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/password"
         android:inputType="textPassword" />
@@ -35,7 +36,7 @@
         android:textColor="@color/brown"
         android:textStyle="bold" />
 
-    <Button
+    <TextView
         android:id="@+id/signInButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -44,6 +45,6 @@
         android:textColor="@color/brown"
         android:textStyle="bold">
 
-    </Button>
+    </TextView>
 
 </androidx.appcompat.widget.LinearLayoutCompat>

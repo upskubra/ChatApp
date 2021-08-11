@@ -24,6 +24,13 @@ class LoginScreenFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         auth = Firebase.auth
+
+        val currentUser = auth.currentUser
+        if (currentUser !=null){
+            val action = LoginScreenFragmentDirections.actionLoginScreenFragmentToChatScreenFragment()
+            findNavController().navigate(action)
+
+        }
     }
 
 
@@ -44,6 +51,28 @@ class LoginScreenFragment : Fragment() {
 
 
         binding.logInButton.setOnClickListener {
+
+            auth.signInWithEmailAndPassword(binding.TextEmailAddress.text.toString(), binding.TextPassword.text.toString())
+                .addOnSuccessListener {
+
+                    val action = LoginScreenFragmentDirections.actionLoginScreenFragmentToChatScreenFragment()
+                    findNavController().navigate(action)
+
+
+
+
+                }.addOnFailureListener { Exception ->
+
+
+                    println(binding.TextEmailAddress.toString())
+                    context?.let {
+
+                        Toast.makeText(it.applicationContext,Exception.localizedMessage, Toast.LENGTH_LONG).show()
+                    }
+
+
+
+                }
 
 
         }
